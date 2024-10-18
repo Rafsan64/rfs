@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFS WIKI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>oh what?</h1>
+    </header>
+    
+    <main>
+        <button id="revealButton">no</button>
+        
+        <div id="hiddenInfo" class="hidden">
+            <p id="infoText">FB 6RADP4QK3NVHK5ROF7NGOSYZUEPQO7AX <br> DC 4jc7x3t2ckdcqryqtobmwwpzqikv3chf</p>
+            <button id="copyButton">Copy</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>RFS | © 2024</p>
+    </footer>
+
+    <script>
+        const revealButton = document.getElementById('revealButton');
+        const hiddenInfo = document.getElementById('hiddenInfo');
+        const copyButton = document.getElementById('copyButton');
+        
+        const correctPassword = '6494'; // Replace with your desired password
+
+        revealButton.addEventListener('click', () => {
+            const userPassword = prompt("Enter the password to view the information:");
+            if (userPassword === correctPassword) {
+                hiddenInfo.classList.remove('hidden');
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        });
+
+
+    </script>
+</body>
+</html>
